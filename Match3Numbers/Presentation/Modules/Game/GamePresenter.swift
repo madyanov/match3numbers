@@ -44,7 +44,7 @@ private extension GamePresenter {
         updateScore(game: game)
 
         if game.match() == false {
-            if game.score <= 0 {
+            if game.isOver {
                 alertProvider?.showAlert(title: "GAME OVER",
                                          message: nil,
                                          actions: [.init(title: "OK", handler: { [weak self] in self?.startGame() })])

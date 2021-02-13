@@ -13,6 +13,8 @@ final class Game {
     private let valuesRange: Range<Int>
     private let boardMatcher: BoardMatcher
 
+    var isOver: Bool { return score <= 0 }
+
     init(equation: Equation,
          board: Board,
          valuesRange: Range<Int>,
