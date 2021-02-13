@@ -10,11 +10,7 @@ import UIKit
 final class GameViewController: UIViewController, AlertProvider {
     private let presenter: GamePresenter
 
-    private lazy var gameView: GameView = {
-        let gameView = GameView()
-        gameView.translatesAutoresizingMaskIntoConstraints = false
-        return gameView
-    }()
+    private lazy var gameView = GameView()
 
     init(presenter: GamePresenter) {
         self.presenter = presenter
