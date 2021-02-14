@@ -38,7 +38,6 @@ final class Game {
     }
 
     func fill() {
-        let values = board.values.map { $0 ?? valuesRange.randomElement() }
-        board = Board(width: board.width, height: board.height, values: values)
+        board.fill { valuesRange.randomElement() }
     }
 }

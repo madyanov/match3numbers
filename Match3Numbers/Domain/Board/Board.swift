@@ -18,4 +18,8 @@ struct Board {
     mutating func set(x: Int, y: Int, value: Int?) {
         values[x + y * width] = value
     }
+
+    mutating func fill(using generator: () -> Int?) {
+        values = values.map { $0 ?? generator() }
+    }
 }
